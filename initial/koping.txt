@@ -1,0 +1,14 @@
+1. This is a review of the manuscript "Investigation of energy conservation using poppers" by Badmin, Koping, and Pechersky. I recommend major revisions.
+
+2. In many cases the tone, word choice, verb tense, and sentence structure are inappropriate for a scientific publication. I recommend the authors review their work with a writing coach or copy editor to help improve in this respect. Rather than deal with these in detail I will confine my review to the science parts; though many of these items are marked in the attached file.
+
+3. Authors should use physics variables (e.g. E or v) instead of statistics conventions (mu for population mean) when outlining hypotheses to be consistent with the notation everywhere else in the paper.
+
+4. Software like FizziQ needs to be properly referenced, and the necessary information given for how it was used like the frame rate, how many frames were digitized and at what rate, how the software was computing derivatives, etc. Software for statistical analyses is not identified; authors should make their code available. 
+
+5. Authors are not providing sufficient information for how they computed the work done in compressing the popper; they hide a result (7.62N) within the methods and never use it to compute the work done in compressing the popper. Figure 3.3 (which probably should show this data) has no data on it just a line.
+
+6. The discussion for some reason follows a formula that looks like it was taken from a statistics class outline? It is silly to have different subsections for "Restating the Experiment" and "Conclusion". This whole this is the Discussion (=conclusion).
+
+7. There appear to be 4 references; Chazot for FizziQ; Sadie Carnot; Clausius, and Tipler. The Clausius reference is not correctly formatted; nor is the Carnot reference. I do not see a Carnot reference anywhere in the text.
+
