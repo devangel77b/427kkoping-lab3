@@ -1,0 +1,188 @@
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2} % for editor use only
+
+% For initial submission use these lines
+%\documentclass[amsmath,amssymb,aps,endfloats,linenumbers]{revtex4-2}
+
+
+
+% DO NOT CHANGE THINGS BELOW HERE
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{siunitx}
+%\usepackage{tikz,pgfplots}
+\sisetup{separate-uncertainty=true, multi-part-units=single}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+\usepackage{svg}
+\svgpath{{./figures}}
+
+
+
+
+% set PDF metadata
+% AUTHORS EDIT THIS PART
+\hypersetup{%
+pdftitle={Investigation of energy conservation using poppers}, % full title here
+pdfauthor={Nimya Badmin, Kyle Koping, and Ella Pechersky}, % full author list here
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{2}, xx--xx (2026)} % FOR EDITOR ONLY
+\fancyhead[LO]{Badmin, Koping, \& Pechersky} % if many authors
+\fancyhead[LE]{Investigation of energy conservation using poppers} 
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, xx--xx (2026)} % FOR EDITOR ONLY
+\fancyfoot[C]{\thepage}
+%\fancyfoot[L]{\scriptsize\copyright\ 2026 Journal of Science \& Engineering, \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC-BY-NC 4.0}}
+}
+
+
+\begin{document}
+%\setcounter{page}{67} % FOR EDITOR USE ONLY
+%\linenumbers % FOR EDITOR USE ONLY
+
+% AUTHORS EDIT THIS PART
+\title{Investigation of energy conservation using poppers}
+\author{Nimya Badmin}
+\author{Kyle Koping}
+\email[Contact author: ]{427kkoping@frhsd.com} % use FRHSD address
+\author{Ella Pechersky}
+% For S&E authors
+\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
+\date{\today}
+
+
+% AUTHORS PUT YOUR MANUSCRIPT IN BELOW HERE
+\begin{abstract}
+Rudolf Clausius proposed that energy cannot be created or destroyed, only transformed. This proposal is the basis of the first law of thermodynamics, the conservation of energy. This law indicates that for an object undergoing vertical motion, the initial kinetic energy is equal to the gravitational potential energy at the highest point in an ideal system. Therefore, we tested the validity of his claim. We measured a popper toy’s velocity immediately after launching and at its maximum height using video digitization. We then calculated its mechanical energy to test whether energy was conserved throughout the launch. We carried out a one-sample $t$-test using the differences in mechanical energy to determine whether the energies at both flight points were equal. The analysis provided no statistically significant evidence that the mechanical energy of the popper was not conserved, which is consistent with Clausius’ theory of conservation of energy.
+
+%\vspace{1em} % Add space before DOI
+%\noindent DOI: \href{https://doi.org/10.64804/xxxxxx}{10.64808/xxxxxx}
+\end{abstract}
+
+% For revtex format this will not print on the article page but will be used in setting 
+% the journal metadata so include keywords. Lowercase unless they are acronyms or proper nouns
+% and pick keywords that will actually help people find your work properly. 
+\keywords{conservation of energy, potential energy, kinetic energy, velocity, maximum height, peak height, FizziQ, digitization, mean, standard deviation, t-test, error}
+
+\maketitle\thispagestyle{mytitlepage}
+
+%The current column width is \the\columnwidth
+
+
+
+
+
+
+\section{Introduction}
+The law of conservation of energy states that energy cannot be created or destroyed, but can only be transformed from one form to another, such as from potential to kinetic energy. In an ideal system with no non-conservative forces, the mechanical energy of the system remains constant.
+
+Potential energy is the energy stored in an object relative to its position.
+\begin{equation}
+\text{PE} = mgh.
+\end{equation}
+
+Kinetic energy is the energy of motion.
+\begin{equation}
+\text{KE} = \frac{1}{2} m v^2.
+\end{equation}
+
+Mechanical energy is the sum of a system’s potential and kinetic energy.
+\begin{equation}
+\text{ME} = \text{PE} + \text{KE}
+\end{equation}
+
+The purpose of this experiment was to test the principle of energy conservation by calculating and comparing the popper’s mechanical energy at launch and at its peak height.
+
+The null hypothesis ($H_0$) states that the mean difference in the popper’s mechanical energy at launch and at peak height is zero, meaning that the total mechanical energy remains constant and energy is conserved:
+\begin{equation}
+H_0: E(\text{ME}_f - \text{ME}_0) = 0.
+\end{equation}
+The alternative hypothesis ($H_a$) states that the mean difference in the popper’s kinetic energy at launch and at peak height is positive, meaning that mechanical energy is greater at launch than at peak height, indicating that some mechanical energy is lost during flight, and therefore, energy is not conserved:
+\begin{equation}
+H_a: E(\text{ME}_f - \text{ME}_0) > 0.
+\end{equation}
+    
+    
+    
+    
+    
+
+
+
+\section{Methods and materials}
+\subsection{Lab materials and setup}
+This experiment consisted of launching a popper with a height of approximately 3.5 inches from its maximum possible compression of approximately two inches. This experiment included the use of a popper (Liberty Imports 24 PCS Jumping Emoticon Popper Spring Launchers), a scissor jack, a scale, and a meterstick, all supplied by Dr. Evangelista. For digitization, a smartphone camera (iPhone 13, recording at 60fps at 1.0x zoom in HD) and video analysis software (FizziQ, version 5.0.4) were used. In FizziQ, digitalization was performed at regular intervals (approximately every 6 frames), resulting in a total of 4-6 data points per trial. The mass of the popper was 6.0 grams, and the force required to fully compress the popper was 778 grams-force, which is 7.62 N. The force was found by compressing the popper with a scissor jack on a scale. The yardstick was set up vertically to measure the popper's maximum height. The popper was set approximately two inches from the yardstick so that the yardstick would not interfere with the experiment.
+    
+\subsection{Method of testing and obtaining data}
+For the data collection process, one person recorded the launches while another person launched the popper. The recorder was positioned so that the popper’s peak height was captured on video. The recorder would begin recording and count down from five seconds before launch. The launcher would first compress the popper by pushing down on it, and then release their hand after the countdown to launch the popper into the air. This process was repeated five times to account for confounding variables, including delayed countdowns, human reaction time, and poor launching technique.
+
+These videos were then digitized using FizziQ to find the launch velocity at the earliest possible point. For the digitization, the video motion analysis option was selected on FizziQ. First, the scale of the video was set by aligning the digital ruler with the meterstick used in the experiment. Then, a single point on the popper was tracked throughout its motion, with data points recorded at regular time intervals (approximately every 6 frames). These points were then used by FizziQ to generate the position and velocity data shown in the raw results.
+
+The data for Figures 3.4 and 3.5 were obtained by placing the popper on a scale. A scissor jack was placed directly above the popper to apply a controlled force during compression. A meter stick was placed beside the scale to measure the displacement of the popper as it was compressed. The data was recorded at multiple intervals (approximately every 0.01 meter of compression), with a total of four measurements taken.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+\section{Results}
+The mass of the popper was measured to be 6.0 grams (0.0060 kg). The force required to fully compress the popper was measured as 778 grams-force (gf), which is equivalent to 7.62 N using F = mg.
+
+The results from the five launches were averaged before carrying out a one-sample t-test. All calculations for the statistical test were performed using a TI-84 graphing calculator.
+% You should use something more appropriate like R
+
+
+
+
+
+\section{Discussion}
+\subsection{Statistical analysis}
+Overall, the t-test fails to reject our null hypothesis (H0) that energy is conserved. The values of the test statistic and p-value obtained were 0.239 and 0.411, respectively, as can be seen in Figure 3.6. Since the p-value is greater than the tested significance level of 0.05, there is no statistically significant difference between the mechanical energies at launch and at peak height. Therefore, there is no significant evidence to conclude that energy is lost during the popper’s motion. These results are consistent with our null hypothesis. The graph of kinetic and potential energies (see Figure 3.3) shows a similar trend, with the exception of one obvious outlier (trial two), where the popper appears to have lost 18.01 mJ of energy. While the t-test and graph support energy conservation, individual trial results show variability rather than a consistent loss of energy, most likely due to experimental errors.
+
+\subsection{Sources of error}
+Many possible sources of error could have occurred during this experiment. For example, air resistance could cause some of the popper’s mechanical energy to be lost as thermal energy and sound, resulting in slightly lower mechanical energy at peak height.
+
+Another possible source of error could be inaccuracies in digitizing the popper’s motion. Camera angle distortion, limited frame rate, and human error in placing tracking points could all affect the measured position and velocity value. Additionally, variations in the popper release technique may have affected the results. Differences in how the popper was compressed and released could lead to inconsistent initial energy between trials.
+
+\subsection{Conclusion}
+The null hypothesis (H0) states that the mean difference in the popper’s mechanical energy at launch and at peak height is zero, meaning that the total mechanical energy remains constant. The alternative hypothesis (Ha) states that the mean difference in the popper’s mechanical energy at launch and at peak height is positive, indicating that energy is lost during flight. The results from the one-sample t-test support the null hypothesis. Although individual trials show differences between mechanical energies at launch and at peak height, these variations are likely due to experimental error. Overall, the statistical analysis supports the idea of energy conservation. However, this result is limited by the small sample size and potential sources of error, so it cannot be considered definitive proof.
+
+
+
+
+    
+    
+\section{Acknowledgements}
+We thank the Science \& Engineering Program at Manalapan High School for support. NB helped with methods and materials and results.  KK completed the abstract, carried out the t-test, and wrote about its results. EP helped with the launch procedure, did the video motion analysis, worked on introduction, methods and materials, and idscussion, and handled initial and final revisions.
+
+
+% References – Do not spend too much time trying to perfectly format per MLA or whatever because journals often have their own preferred formats; as long as you have author, title, journal, year, volume, page number it will be findable. Peer reviewed journals or published work only; Food Girl’s Blog is not a peer reviewed journal; Wikipedia is not a peer reviewed journal; Webster’s Dictionary is not necessary in a scientific journal article. If I find fake references your paper will be rejected. 
+
+
+
+
+
+
+\bibliography{example.bib}
+
+%Chazot, Christophe. FizziQ. 5.0.4, Trapèze.digital, 2025, Apple App Store.
+
+%Clausius, R. “On The Moving Force of Heat, and the Laws Regarding the Nature of Heat Itself Which Are Deducible Therefrom.” THE LONDON, EDINBURGH and DUBLIN PHILOSOPHICAL MAGAZINE AND JOURNAL OF SCIENCE, June 1851, sites.pitt.edu/~jdnorton/teaching/2559_Therm_Stat_Mech/docs/Clausius%20Moving%20Force%20heat% 201851.pdf.
+
+%P. A. Tipler and G. Mosca, Physics for Scientists and Engineers, 5th ed. (W H Freeman and Company, New York, 2004).
+
+\end{document}
