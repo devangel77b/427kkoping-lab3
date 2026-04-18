@@ -17,6 +17,14 @@ long <- pivot_longer(data,
      names_to = "type",
      values_to = "energy")
 Efig <- ggplot(long,aes(x=type,y=energy,fill=type))+
+     geom_hline(yintercept=0,color="gray70")+
      stat_summary(geom="bar",fun=mean)+
      stat_summary(geom="errorbar",
-	fun.data=mean_sdl,fun.args=list(mult=1),width=0.2)
+	fun.data=mean_sdl,fun.args=list(mult=1),width=0.2)+
+     ylab('energy, \\unit{\\joule}')+
+     theme_bw(base_size=8)+
+     theme(legend.position="none",axis.title.x=element_blank())
+ggsave('fig33.svg',plot=Efig,width=3.4167,height=2,units="in")
+
+model <- aov(energy~type,long)
+print(summary(model))
