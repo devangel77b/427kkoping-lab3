@@ -122,6 +122,10 @@ H_a: E(\text{ME}_f - \text{ME}_0) > 0.
 
 \section{Methods and materials}
 \subsection{Lab materials and setup}
+\begin{figure}
+\caption{Uncompressed popper. Compressed popper. Setup for measuring mechanical work.}
+\label{fig:212223} 
+\end{figure}
 This experiment consisted of launching a popper with a height of approximately 3.5 inches from its maximum possible compression of approximately two inches. This experiment included the use of a popper (Liberty Imports 24 PCS Jumping Emoticon Popper Spring Launchers), a scissor jack, a scale, and a meterstick, all supplied by Dr. Evangelista. For digitization, a smartphone camera (iPhone 13, recording at 60fps at 1.0x zoom in HD) and video analysis software (FizziQ, version 5.0.4) were used. In FizziQ, digitalization was performed at regular intervals (approximately every 6 frames), resulting in a total of 4-6 data points per trial. The mass of the popper was 6.0 grams, and the force required to fully compress the popper was 778 grams-force, which is 7.62 N. The force was found by compressing the popper with a scissor jack on a scale. The yardstick was set up vertically to measure the popper's maximum height. The popper was set approximately two inches from the yardstick so that the yardstick would not interfere with the experiment.
     
 \subsection{Method of testing and obtaining data}
@@ -144,19 +148,58 @@ The mass of the popper was measured to be 6.0 grams (0.0060 kg). The force requi
 
 The results from the five launches were averaged before carrying out a one-sample t-test. All calculations for the statistical test were performed using a TI-84 graphing calculator.
 % You should use something more appropriate like R
+\begin{table}
+\caption{Popper initial velocity, height, KE and GPE}
+\label{tab:3132}
+\begin{center}
+\begin{ruledtabular}
+\begin{tabular}{SSSSS}
+{trial} & {$v_0$, \unit{\meter\per\second}} & {$h$, \unit{\meter}} & {KE, \unit{\joule}} & {GPE, \unit{\joule}} \\
+\colrule \\
+1 & 5.29 & 1.43 & 0.0840 & 0.0842 \\
+2 & 5.27 & 1.45 & 0.0833 & 0.0853 \\
+3 & 5.06 & 1.33 & 0.0768 & 0.0783 \\
+4 & 5.50 & 1.67 & 0.0908 & 0.0983 \\
+5 & 5.68 & 1.54 & 0.0968 & 0.0906 \\
+\end{tabular}
+\end{ruledtabular}
+\end{center}
+\end{table}
+
 \begin{figure}
 \begin{center}
 \includesvg[width=\columnwidth]{fig33}
 \end{center}
-\caption{Bar graph of kinetic and potential energies}
+\caption{Bar graph of kinetic and potential energies. KE and PE are not significantly different (ANOVA; $p=0.836$).}
 \label{fig:33}
 \end{figure}
+
+\begin{table}
+\caption{Raw data for figure 3.5}
+\label{tab:34}
+\begin{center}
+\begin{ruledtabular}
+\begin{tabular}{S[table-format=1.3]*3S[table-format=1.2]}
+{$x$, \unit{\meter}} & \multicolumn{3}{c}{$F$, \unit{\newton}} \\
+\colrule\\
+0.000 & 0.00 & 0.00 & 0.00 \\
+0.008 & 1.33 & 1.36 & 0.91 \\
+0.013 & 2.39 & 2.00 & 1.98 \\
+0.018 & 2.88 & 2.87 & 3.26 \\
+0.023 & 3.95 & 3.81 & 3.79 \\
+0.028 & 5.25 & 5.28 & 5.16 \\
+0.033 & 6.56 & 6.67 & 6.77 \\
+0.038 & 7.18 & 7.18 & 7.27 \\
+\end{tabular}
+\end{ruledtabular}
+\end{center}
+\end{table}
 
 \begin{figure}
 \begin{center}
 \includesvg[width=\columnwidth]{fig35}
 \end{center}
-\caption{Force newtons versus stretch meters}
+\caption{Force newtons versus stretch meters. The work done to compress the popper (shaded area) is $W=\qty{0.130\pm0.001}{\joule}$.}
 \label{fig:35}
 \end{figure}
 
