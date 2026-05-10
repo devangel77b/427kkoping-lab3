@@ -23,7 +23,10 @@ Efig <- ggplot(long,aes(x=type,y=energy,fill=type))+
 	fun.data=mean_sdl,fun.args=list(mult=1),width=0.2)+
      ylab('energy, \\unit{\\joule}')+
      theme_bw(base_size=8)+
-     theme(legend.position="none",axis.title.x=element_blank())
+     theme(legend.position="none",
+	axis.title.x=element_blank(),
+	axis.title.y=element_text(margin=margin(r=8))
+	)
 ggsave('fig33.svg',plot=Efig,width=3.4167,height=2,units="in")
 
 model <- aov(energy~type,long)
