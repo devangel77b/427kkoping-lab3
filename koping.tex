@@ -94,24 +94,24 @@ Rudolf Clausius proposed that energy cannot be created or destroyed, only transf
 
 
 \section{Introduction}
-The law of conservation of energy states that energy cannot be created or destroyed, but can only be transformed from one form to another, such as from potential to kinetic energy. In an ideal system with no non-conservative forces, the mechanical energy of the system remains constant.
+The law of conservation of energy states that energy cannot be created or destroyed, but can only be transformed from one form to another, such as from potential to kinetic energy \cite{clausius:1851:on,tipler,barrons,openstax}. In an ideal system with no non-conservative forces, the mechanical energy of the system remains constant.
 
-Potential energy is the energy stored in an object relative to its position.
+Potential energy is the energy stored in an object relative to its position \cite{tipler,barrons,openstax}:
 \begin{equation}
 \text{PE} = mgh.
 \end{equation}
 
-Kinetic energy is the energy of motion.
+Kinetic energy is the energy of motion \cite{tipler,barrons,openstax}:
 \begin{equation}
 \text{KE} = \frac{1}{2} m v^2.
 \end{equation}
 
-Mechanical energy is the sum of a system’s potential and kinetic energy.
+Total mechanical energy is the sum of a system’s potential and kinetic energy \cite{tipler,barrons,openstax}:
 \begin{equation}
-\text{ME} = \text{PE} + \text{KE}
+\text{ME} = \text{PE} + \text{KE}.
 \end{equation}
 
-The purpose of this experiment was to test the principle of energy conservation by calculating and comparing the popper’s mechanical energy at launch and at its peak height.
+The purpose of this experiment was to test the principle of energy conservation by calculating and comparing the popper’s total mechanical energy at launch and at its peak height.
 
 The null hypothesis ($H_0$) states that the mean difference in the popper’s mechanical energy at launch and at peak height is zero, meaning that the total mechanical energy remains constant and energy is conserved:
 \begin{equation}
@@ -131,20 +131,28 @@ H_a: E(\text{ME}_f - \text{ME}_0) > 0.
 
 \section{Methods and materials}
 \subsection{Lab materials and setup}
+This experiment included the use of a popper (Jumping Emoticon Popper Spring Launchers; Liberty Imports; Allentown, PA), a scissor jack, a digital scale (TOP2KG; SmartWeight; Jiangsu, China), and a meter stick, as shown in in \cref{fig:212223}.
 \begin{figure}
-\caption{Uncompressed popper. Compressed popper. Setup for measuring mechanical work.}
+\begin{center}
+\includegraphics[width=\columnwidth]{figures/setup.png}
+\end{center}
+\caption{(A) Uncompressed popper. (B) Compressed popper. (C) Setup for measuring mechanical work using digital scale and scissor jack.}
 \label{fig:212223} 
 \end{figure}
-This experiment consisted of launching a popper with a height of approximately 3.5 inches from its maximum possible compression of approximately two inches. This experiment included the use of a popper (Liberty Imports 24 PCS Jumping Emoticon Popper Spring Launchers), a scissor jack, a scale, and a meterstick, all supplied by Dr. Evangelista. For digitization, a smartphone camera (iPhone 13, recording at 60fps at 1.0x zoom in HD) and video analysis software (FizziQ, version 5.0.4) were used. In FizziQ, digitalization was performed at regular intervals (approximately every 6 frames), resulting in a total of 4-6 data points per trial. The mass of the popper was 6.0 grams, and the force required to fully compress the popper was 778 grams-force, which is 7.62 N. The force was found by compressing the popper with a scissor jack on a scale. The yardstick was set up vertically to measure the popper's maximum height. The popper was set approximately two inches from the yardstick so that the yardstick would not interfere with the experiment.
+To examine energy conservation, we launched a popper with a height of approximately 3.5-inch (\qty{89}{\milli\meter}; see \cref{fig:212223}A) from its maximum possible compression of approximately 2-inch (\qty{51}{\milli\meter}; see \cref{fig:212223}B).  For digitization, a smartphone camera (iPhone 13, recording at 60fps at 1.0x zoom in HD; Apple Inc; Cupertino, CA) and video analysis software (FizziQ, version 5.0.4) were used \cite{chazot:2025:using,badmin:2026:investigation}. In FizziQ, digitization was performed at regular intervals (approximately every 6 frames), resulting in a total of 4-6 data points per trial, similar to \cite{badmin:2026:investigation}. A meter stick was set up vertically for scale, to measure the maximum height attained by the popper during launch. The popper was set approximately 2-inch from the yardstick so that the yardstick would not interfere with the experiment.
+
+The mass of the popper was \qty{6.0}{\gram}, and the force required to fully compress the popper was \qty{778}{\gram}, which is \qty{7.62}{\newton}. The force was found by compressing the popper with a scissor jack on a digital scale  (see \cref{fig:212223}C); this method was also used to determine work done in compressing the popper, as described below. 
     
 \subsection{Method of testing and obtaining data}
 For the data collection process, one person recorded the launches while another person launched the popper. The recorder was positioned so that the popper’s peak height was captured on video. The recorder would begin recording and count down from five seconds before launch. The launcher would first compress the popper by pushing down on it, and then release their hand after the countdown to launch the popper into the air. This process was repeated five times to account for confounding variables, including delayed countdowns, human reaction time, and poor launching technique.
 
-These videos were then digitized using FizziQ to find the launch velocity at the earliest possible point. For the digitization, the video motion analysis option was selected on FizziQ. First, the scale of the video was set by aligning the digital ruler with the meterstick used in the experiment. Then, a single point on the popper was tracked throughout its motion, with data points recorded at regular time intervals (approximately every 6 frames). These points were then used by FizziQ to generate the position and velocity data shown in the raw results.
+These videos were then digitized using FizziQ to find the launch velocity at the earliest possible point \cite{chazot:2025:using,badmin:2026:investigation}. The scale of the video was set using the meter stick as a scale reference. Then, a single point on the popper was tracked throughout its motion, with data points recorded at regular time intervals (approximately every 6 frames). These points were then used by FizziQ to generate the position and velocity data shown in the raw results.
 
-The data for Figures 3.4 and 3.5 were obtained by placing the popper on a scale. A scissor jack was placed directly above the popper to apply a controlled force during compression. A meter stick was placed beside the scale to measure the displacement of the popper as it was compressed. The data was recorded at multiple intervals (approximately every 0.01 meter of compression), with a total of four measurements taken.
+The results from the five launches were averaged before carrying out a one-sample $t$-test. Calculations for the statistical test were performed using a TI-84 graphing calculator. Additional statistical analyses including ANOVA were performed in R \cite{starnes:2015:practice,R,ggplot2,dplyr}. 
+
+To determine work done in compressing the popper, the popper was placed on the digital scale and the scissor jack was used to apply a controlled force during compression. A meter stick was placed beside the scale to measure the displacement of the popper as it was compressed. The data was recorded at multiple intervals (approximately every \qty{0.005}{\meter} of compression), with  three replicates for each compression value.
     
-    
+Data and analysis code are available at \url{https://github.com/devangel77b/427kkoping-lab3}.    
     
     
     
@@ -153,9 +161,8 @@ The data for Figures 3.4 and 3.5 were obtained by placing the popper on a scale.
     
     
 \section{Results}
-The mass of the popper was measured to be 6.0 grams (0.0060 kg). The force required to fully compress the popper was measured as 778 grams-force (gf), which is equivalent to 7.62 N using F = mg.
+The mass of the popper was measured to be \qty{6.0}{\gram} (\qty{0.0060}{\kilo\gram}). The force required to fully compress the popper was measured as \qty{778}{\gram} force, which is equivalent to \qty{7.62}{\newton}, using $F = mg$ where $g=\qty{9.8}{\meter\per\second\squared}$ \cite{tipler,barrons,openstax}.
 
-The results from the five launches were averaged before carrying out a one-sample t-test. All calculations for the statistical test were performed using a TI-84 graphing calculator.
 % You should use something more appropriate like R
 \begin{table}
 \caption{Popper initial velocity, height, KE and GPE}
@@ -179,12 +186,12 @@ The results from the five launches were averaged before carrying out a one-sampl
 \begin{center}
 \includesvg[width=\columnwidth]{fig33}
 \end{center}
-\caption{Bar graph of kinetic and potential energies. KE and PE are not significantly different (ANOVA; $p=0.836$).}
+\caption{Bar graph of kinetic and potential energies; data from \cref{tab:3132}. KE and PE are not significantly different (ANOVA; $p=0.836$).}
 \label{fig:33}
 \end{figure}
 
 \begin{table}
-\caption{Raw data for figure 3.5}
+\caption{Force-compression raw data for \cref{fig:35}, to determine work to compress a popper}
 \label{tab:34}
 \begin{center}
 \begin{ruledtabular}
@@ -208,31 +215,37 @@ The results from the five launches were averaged before carrying out a one-sampl
 \begin{center}
 \includesvg[width=\columnwidth]{fig35}
 \end{center}
-\caption{Force newtons versus stretch meters. The work done to compress the popper (shaded area) is $W=\qty{0.130\pm0.001}{\joule}$.}
+\caption{Force (\unit{\newton}) versus compression (\unit{\meter}); data from \cref{tab:34}. The work done to compress the popper (shaded area) is $W=\qty{0.130\pm0.001}{\joule}$.}
 \label{fig:35}
 \end{figure}
 
 
 
 \section{Discussion}
-\subsection{Statistical analysis}
-Overall, the t-test fails to reject our null hypothesis (H0) that energy is conserved. The values of the test statistic and p-value obtained were 0.239 and 0.411, respectively, as can be seen in Figure 3.6. Since the p-value is greater than the tested significance level of 0.05, there is no statistically significant difference between the mechanical energies at launch and at peak height. Therefore, there is no significant evidence to conclude that energy is lost during the popper’s motion. These results are consistent with our null hypothesis. The graph of kinetic and potential energies (see Figure 3.3) shows a similar trend, with the exception of one obvious outlier (trial two), where the popper appears to have lost 18.01 mJ of energy. While the t-test and graph support energy conservation, individual trial results show variability rather than a consistent loss of energy, most likely due to experimental errors.
+\subsection{Energy is conserved during flight phase}
+Our null hypothesis ($H_0$) was that the mean difference in the popper’s mechanical energy at launch and at peak height is zero, meaning that the total mechanical energy remains constant. Our alternative hypothesis ($H_a$) was that the mean difference in the popper’s mechanical energy at launch and at peak height is positive, indicating that energy is lost during flight. Our results from both a one-sample $t$-test as well as from analysis of variance (ANOVA) fail to reject the null hypothesis and do not support the alternative hypothesis.  The values of the test statistic and $p$-value obtained were 0.239 and 0.411, respectively, as can be seen in \cref{tab:3132,fig:33}. Since the $p$-value is greater than the tested significance level of 0.05, there is no statistically significant difference between the mechanical energies at launch and at peak height. Therefore, there is no significant evidence to conclude that energy is lost during the popper’s motion. These results are most consistent with our null hypothesis. 
+
+Although individual trials show small differences between mechanical energies at launch and at peak height, these variations are likely due to experimental error. Overall, the statistical analysis supports the idea of energy conservation. However, this result is limited by the small sample size (five replicates; one popper) and potential sources of error.
+
+%Overall, the $t$-test fails to reject our null hypothesis ($H_0$) that energy is conserved. 
+%The graph of kinetic and potential energies (see \cref{tab:34}) shows a similar trend, with the exception of one obvious outlier (trial two), where the popper appears to have lost 18.01 mJ of energy. While the t-test and graph support energy conservation, individual trial results show variability rather than a consistent loss of energy, most likely due to experimental errors.
+
+\subsection{Energy lost during launch is significant}
+Kinetic energy at launch (\cref{fig:33}) is significantly less than the work done to compress the popper (\cref{fig:35}. With the data we obtained, we are unable to explain why the launch process loses approximately \qtyrange{30}{40}{\percent} of the elastically potential energy stored when the popper is compressed; this should be examined further in future work.
 
 \subsection{Sources of error}
-Many possible sources of error could have occurred during this experiment. For example, air resistance could cause some of the popper’s mechanical energy to be lost as thermal energy and sound, resulting in slightly lower mechanical energy at peak height.
+Many possible sources of error could have occurred during this experiment. For example, air resistance could cause some of the popper’s mechanical energy to be lost as thermal energy and sound, resulting in slightly lower mechanical energy at peak height, although \cref{fig:33} shows no significant differences between KE and GPE.
 
 Another possible source of error could be inaccuracies in digitizing the popper’s motion. Camera angle distortion, limited frame rate, and human error in placing tracking points could all affect the measured position and velocity value. Additionally, variations in the popper release technique may have affected the results. Differences in how the popper was compressed and released could lead to inconsistent initial energy between trials.
 
-\subsection{Conclusion}
-The null hypothesis (H0) states that the mean difference in the popper’s mechanical energy at launch and at peak height is zero, meaning that the total mechanical energy remains constant. The alternative hypothesis (Ha) states that the mean difference in the popper’s mechanical energy at launch and at peak height is positive, indicating that energy is lost during flight. The results from the one-sample t-test support the null hypothesis. Although individual trials show differences between mechanical energies at launch and at peak height, these variations are likely due to experimental error. Overall, the statistical analysis supports the idea of energy conservation. However, this result is limited by the small sample size and potential sources of error, so it cannot be considered definitive proof.
-
+%\subsection{Conclusion}
 
 
 
     
     
 \section{Acknowledgements}
-We thank the Science \& Engineering Program at Manalapan High School for support. NB helped with methods and materials and results.  KK completed the abstract, carried out the t-test, and wrote about its results. EP helped with the launch procedure, did the video motion analysis, worked on introduction, methods and materials, and idscussion, and handled initial and final revisions.
+We thank the Science \& Engineering Program at Manalapan High School for support. NB helped with methods and materials and results.  KK completed the abstract, carried out the t-test, and wrote about its results. EP helped with the launch procedure, did the video motion analysis, worked on introduction, methods and materials, and discussion, and handled initial and final revisions.
 
 
 % References – Do not spend too much time trying to perfectly format per MLA or whatever because journals often have their own preferred formats; as long as you have author, title, journal, year, volume, page number it will be findable. Peer reviewed journals or published work only; Food Girl’s Blog is not a peer reviewed journal; Wikipedia is not a peer reviewed journal; Webster’s Dictionary is not necessary in a scientific journal article. If I find fake references your paper will be rejected. 
@@ -242,7 +255,7 @@ We thank the Science \& Engineering Program at Manalapan High School for support
 
 
 
-\bibliography{example.bib}
+\bibliography{lab.bib}
 
 %Chazot, Christophe. FizziQ. 5.0.4, Trapèze.digital, 2025, Apple App Store.
 
